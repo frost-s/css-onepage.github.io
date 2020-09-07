@@ -1,4 +1,6 @@
-function sdSearch() {
+function sdSearch() 
+
+{
 	var case = document.getElementById("sdId");
 	var casenumber = case.trim();
 	if(casenumber.value.length==0)
@@ -86,5 +88,3 @@ function sdQueueSearch(){
 	 document.getElementById("service-desk-container").style.display="none";
 	 document.getElementById(elementId).style.display="";
 }
-
-
