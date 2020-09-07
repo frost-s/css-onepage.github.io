@@ -185,7 +185,7 @@ ul li.active button {
     margin-top: 0;
 }
 .tools {
-    height: 100vh;
+    height: 97.5vh;
     background-color: #D6DBDF;
 }
 .tools-main {
@@ -197,17 +197,12 @@ ul li.active button {
     text-decoration: none;
     padding: 15px;
     margin: 5px;
-    /*border-left: 5px solid #817B7D;
-	
-	/*color: #404244 ;*/
     background-color: #E5E7E9;
-    /*#F1C40F;*/
     border-left: 5px solid #FDC200;
     color: #1F262A;
 }
 .tools-main > a: hover {
     background-color: #ABB2B9;
-    /*#F1C40F;*/
     border-left: 5px solid #2C3E50;
     color: #2C3E50;
 }
@@ -267,4 +262,5 @@ ul li.active button {
     font-size: 14px;
     outline: none;
     border-radius: 20px;
+	height: 40px;
 }
