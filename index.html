@@ -11,7 +11,7 @@
    <body>
    
 			<div class="top-search">
-				<input type="text" id="sdId" placeholder="Search here..." class="sidebar-search shadow">
+				<input type="text" id="sdId-top" placeholder="Search here..." class="sidebar-search shadow">
 				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
 			</div>
 		<div id="tools" class="tools">			
@@ -92,6 +92,14 @@
     
       <script type="text/javascript">
          var input = document.getElementById('sdId');
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById('sdSearchEnter').click();
+           }
+         });
+	      
+	      var input = document.getElementById('sdId-top');
          input.addEventListener("keyup", function(event) {
            if (event.keyCode === 13) {
             event.preventDefault();
