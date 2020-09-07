@@ -1,0 +1,157 @@
+<html>
+   <head>
+   <title> CSS One Page</title>
+	<link rel = "icon" href = "./images/icons/support.png"  type = "image/x-icon"> 
+      <link rel = "stylesheet" type = "text/css" href = "./style.css" />
+      <script type="text/javascript" src="script.js"></script>  
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   </head>
+   <body>
+   
+			<form class="top-search">
+				<input type="text" id="sdId" placeholder="Search here..." class="sidebar-search shadow">
+				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
+			</form>
+		<!--<div class="top-navbar">
+			<!--<img src="" class="microsoft-logo"/>
+			<div class="pbi-links">
+				<a href="https://powerbi.microsoft.com/en-us/blog/" target="_blank"><b>Blog</b></a>
+				<a href="https://community.powerbi.com/" target="_blank"><b>Community Forum</b></a>
+				<a href="https://ideas.powerbi.com/ideas/" target="_blank"><b>Idea Forum</b></a>
+				<a href="https://powerbi.microsoft.com/en-us/support/" target="_blank"><b>Support Page</b></a>
+			</div>
+		</div>-->
+		<div id="tools" class="tools">			
+			<div class="tools-main">
+				
+				<a href="https://dev.azure.com/Supportability/Power%20BI/_wiki/wikis/Wiki/122231/Home-Page" target="_blank"><b>CSS Supportability Wiki</b></a>
+				<a href="https://dataexplorer.azure.com/clusters" target="_blank"><b>ADE Explorer</b></a>
+				<a href="https://onetrace.azurewebsites.net/" target="_blank"><b>One Trace</b></a>
+				<a href="https://msaas.support.microsoft.com/queue" target="_blank"><b>Find the right Service Desk Team while transferring the case</b></a>
+				<a href="https://jarvis-west.dc.ad.msft.net/logs/dgrep" target="_blank"><b>Jarvis</b></a>
+				<a href="https://login.microsoftonline.com/error" target="_blank"><b>Search about any Azure Error Code (Ex: AADSTS50173)</b></a>
+				<a href="https://pbiwiki.com/" target="_blank"><b>Power BI Wiki</b></a>
+				<a href="https://microsoft.sharepoint.com/teams/bidpwiki/Lists/PBI%20%20Current%20Known%20Issues/Reading%20View.aspx" target="_blank"><b>Known Issues</b></a>
+				<a href="https://microsoft.sharepoint.com/:f:/t/PBIEEE/EsZUa4nXlPtMgcEI18HWrc4Bkt5dUryijDu7dhIosDwGpw?e=5n82R8" target="_blank"><b>Dider Troubleshooting Session PPTs</b></a>
+				<a href="https://msit.powerbi.com/groups/me/apps/5f3ba0cf-940a-4fe6-8d7b-6708563e4430/reports/dc6b9420-b1e4-4ce9-b2fb-7b94047a8563/ReportSection" target="_blank"><b>Check if customer's tenant recently went through Tenant Migration</b></a>
+				<a href="https://msit.powerbi.com/groups/me/apps/5f3ba0cf-940a-4fe6-8d7b-6708563e4430/reports/951093fa-cd5a-4581-b434-55b14de6206b/ReportSection235d407d234c1b04606e" target="_blank"><b>Check Service Comms Current Status</b></a>
+				
+				<a href="https://msit.microsoftstream.com/channel/f2b2290c-5d05-4581-ae65-72c5393b46df" target="_blank"><b>Knowledge Nuggets</b></a>
+				<a href="https://msit.microsoftstream.com/channel/dbfe6714-565c-411b-855a-819f162b546f" target="_blank"><b>Didier Troubleshooting Sessions | Microsoft Stream</b></a>
+				<a href="https://bapcssnewhiretraining.powerappsportals.com/" target="_blank"><b>BAP CSS Training Portal</b></a>
+				<a href="https://msit.powerbi.com/groups/me/apps/5f3ba0cf-940a-4fe6-8d7b-6708563e4430/reports/0f3827c6-ed85-462b-9056-1c5b3eed49e8/ReportSection8a90f74130d1a347eb0b" target="_blank"><b>Check Trains Deployment Status</b></a>
+				<a href="https://pbiwiki.com/wiki/PBI_Feature_Ownership" target="_blank"><b>Feature Ownership | Know which team owns the feature</b></a>
+			</div>
+		 </div>
+		 
+         <div id="service-desk-container" class="sd-container"  style="display:none;">
+           <div class="serviceDeskSearch">
+				 <input type="text" id="sdId" placeholder="Enter any Support Request, IcM or Rave number here..." class="input-search shadow">
+				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
+		   </div>
+		   <p>Search for any Service Request, IcM or Rave number to open them in a new window. You can also click on below buttons to go to their respective home pages.</p>
+		   <div class="homeIcons">
+				<button id="sdHome" class="button sdHome" onclick="sdHome()">Service Desk</button>
+				<button id="icmHome" class="button icmHome" onclick="icmHome()">IcM</button>	
+				<button id="raveHome" class="button raveHome" onclick="raveHome()">Rave</button>	
+			</div>
+		 </div>
+		 
+		 	
+		 
+		 <div id="search-azure-devops" class="azureDevOpsContainer"  style="display:none;">
+			<div id="azure-devops" class="azureDevOpsSearch">
+				<input type="text" id="devops" placeholder="Search CSS Supportability app here..." class="input-search shadow">
+				<button id="devopsSearch" class="button csssupportabilitywiki shadow" onclick="devopsSearch()"><i class="fa fa-search"></i></button>
+		
+			 </div>
+		   <div class="homeIcons">
+			</div>
+		 </div>		 
+		 
+		 
+		 <div id="search-pbioffdoc" class="sd-container" style="display:none;">
+			<div id="azure-devops" class="azureDevOpsSearch">
+				<input type="text" id="pbioffdocsearch" placeholder="Search Power BI documentation here...." class="input-search shadow">
+				<button id="pbioffdocsearch-btn" class="button csssupportabilitywiki shadow" onclick="pbiOfficialDocsSearch()"><i class="fa fa-search"></i></button>
+			 </div>
+		    <div class="homeIcons">
+				<a href="https://powerbi.microsoft.com/en-us/blog/" target="_blank"><b>Blog</b></a>
+				<a href="https://community.powerbi.com/" target="_blank"><b>Community Forum</b></a>
+				<a href="https://ideas.powerbi.com/ideas/" target="_blank"><b>Idea Forum</b></a>
+				<a href="https://powerbi.microsoft.com/en-us/support/" target="_blank"><b>Support Page</b></a>
+			</div>
+		 </div>
+	
+		 
+		 
+		
+	<!--
+      <div class="sidebar" id="sidebar">
+         <ul>
+            <li><a href="#service-desk-container" target="">Search Case Here</a></li>
+			<li><a href="#search-azure-devops">Search DevOps</a></li>
+            <li class="active"><a href="#tools">Tools</a></li>
+            <li><a href="#search-pbioffdoc">Documentation</a></li>
+         </ul>
+      </div>-->
+	  
+	  
+	<div class="sidebar" id="sidebar">
+         <ul>
+            <li class="sidebar-btn"><button onclick="show('service-desk-container')">Case Here</button></li>
+			<li  class="sidebar-btn"><button onclick="show('search-azure-devops')">Search DevOps</button></li>
+            <li class="sidebar-btn active"><button onclick="show('tools')">Tools</button></li>
+            <li class="sidebar-btn"><button  onclick="show('search-pbioffdoc')">Documentation</button></li>
+         </ul>
+      </div> 
+      <!--<div>
+        
+         
+         
+         <button id=createIcM onclick="sdSearch()">Create IcM</button>
+         
+        
+         <button id=knowledgeNuggets onclick="sdSearch()">Knowledge Nuggets</button>
+         <button id=pbiSupportability onclick="sdSearch()">PBI Supportability</button>
+         <button id=cpeGlobal onclick="sdSearch()">CPE Global</button>
+         </div>-->
+      <script type="text/javascript">
+         var input = document.getElementById('sdId');
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById('sdSearchEnter').click();
+           }
+         });
+		 
+		  var input = document.getElementById('devops');
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById('devopsSearch').click();
+           }
+         });
+		 
+		   var input = document.getElementById('pbioffdocsearch');
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById('pbioffdocsearch-btn').click();
+           }
+         });
+			
+		let ul = document.querySelector('ul');
+		let li = document.querySelectorAll('li');
+		
+		li.forEach(el => {
+		el.addEventListener('click', function(){
+			ul.querySelector('.active').classList.remove('active');
+			
+			el.classList.add('active');		
+		});
+		});
+      </script>
+   </body>
+</html>
