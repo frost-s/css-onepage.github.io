@@ -14,7 +14,7 @@ p {
     border: none;
     font-size: 14px;
     outline: none;
-    height: 40px;
+    height: 25px;
     border-radius: 8px;
 }
 .button {
@@ -262,5 +262,5 @@ ul li.active button {
     font-size: 14px;
     outline: none;
     border-radius: 20px;
-	height: 40px;
+	height: 25px;
 }
