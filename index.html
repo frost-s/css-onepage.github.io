@@ -11,8 +11,8 @@
    <body>
    
 			<div class="top-search">
-				<input type="text" id="sdId" placeholder="Search SR / Rave / IcM..." class="sidebar-search shadow">
-				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
+				<input type="text" id="sdId-top" placeholder="Search SR / Rave / IcM..." class="sidebar-search shadow">
+				<button id="sdSearchEnter-top" onclick="sdSearch()"><i class="fa fa-search"></i></button>
 			</div>
 		<div id="tools" class="tools">			
 			<div class="tools-main">
@@ -83,7 +83,7 @@
 	  
 	<div class="sidebar" id="sidebar">
          <ul>
-            <li class="sidebar-btn"><button onclick="show('service-desk-container')">Case Here</button></li>
+            <li class="sidebar-btn"><button onclick="show('service-desk-container')">Search Case</button></li>
 			<li  class="sidebar-btn"><button onclick="show('search-azure-devops')">Search DevOps</button></li>
             <li class="sidebar-btn active"><button onclick="show('tools')">Tools</button></li>
             <li class="sidebar-btn"><button  onclick="show('search-pbioffdoc')">Documentation</button></li>
@@ -103,7 +103,7 @@
          input.addEventListener("keyup", function(event) {
            if (event.keyCode === 13) {
             event.preventDefault();
-            document.getElementById('sdSearchEnter').click();
+            document.getElementById('sdSearchEnter-top').click();
            }
          });
 		 
