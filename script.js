@@ -1,6 +1,4 @@
-function sdSearch() 
-
-{
+function sdSearch(){
 	var sr = document.getElementById("sdId");
 	var casenumber = sr.trim();
 	if(casenumber.value.length==0)
