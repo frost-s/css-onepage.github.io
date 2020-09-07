@@ -10,19 +10,10 @@
    </head>
    <body>
    
-			<form class="top-search">
+			<div class="top-search">
 				<input type="text" id="sdId" placeholder="Search here..." class="sidebar-search shadow">
 				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
-			</form>
-		<!--<div class="top-navbar">
-			<!--<img src="" class="microsoft-logo"/>
-			<div class="pbi-links">
-				<a href="https://powerbi.microsoft.com/en-us/blog/" target="_blank"><b>Blog</b></a>
-				<a href="https://community.powerbi.com/" target="_blank"><b>Community Forum</b></a>
-				<a href="https://ideas.powerbi.com/ideas/" target="_blank"><b>Idea Forum</b></a>
-				<a href="https://powerbi.microsoft.com/en-us/support/" target="_blank"><b>Support Page</b></a>
 			</div>
-		</div>-->
 		<div id="tools" class="tools">			
 			<div class="tools-main">
 				
@@ -87,16 +78,7 @@
 	
 		 
 		 
-		
-	<!--
-      <div class="sidebar" id="sidebar">
-         <ul>
-            <li><a href="#service-desk-container" target="">Search Case Here</a></li>
-			<li><a href="#search-azure-devops">Search DevOps</a></li>
-            <li class="active"><a href="#tools">Tools</a></li>
-            <li><a href="#search-pbioffdoc">Documentation</a></li>
-         </ul>
-      </div>-->
+	
 	  
 	  
 	<div class="sidebar" id="sidebar">
@@ -107,17 +89,7 @@
             <li class="sidebar-btn"><button  onclick="show('search-pbioffdoc')">Documentation</button></li>
          </ul>
       </div> 
-      <!--<div>
-        
-         
-         
-         <button id=createIcM onclick="sdSearch()">Create IcM</button>
-         
-        
-         <button id=knowledgeNuggets onclick="sdSearch()">Knowledge Nuggets</button>
-         <button id=pbiSupportability onclick="sdSearch()">PBI Supportability</button>
-         <button id=cpeGlobal onclick="sdSearch()">CPE Global</button>
-         </div>-->
+    
       <script type="text/javascript">
          var input = document.getElementById('sdId');
          input.addEventListener("keyup", function(event) {
