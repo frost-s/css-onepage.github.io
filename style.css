@@ -14,7 +14,7 @@ p {
     border: none;
     font-size: 14px;
     outline: none;
-    height: 20px;
+    height: 40px;
     border-radius: 8px;
 }
 .top-navbar {
@@ -199,7 +199,7 @@ ul li.active button {
 .tools-main {
     display: flex;
     flex-direction: column;
-    padding: 60px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
 }
 .tools-main > a {
     text-decoration: none;
