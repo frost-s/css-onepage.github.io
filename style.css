@@ -186,14 +186,14 @@ ul li.active button {
     flex-direction: column;
     background-color: #D6DBDF;
     padding-bottom: 25px;
-    height: 96.5vh;
+    height: 97.5vh;
 }
 .homeIcons {
     padding-top: 20px;
     margin-top: 0;
 }
 .tools {
-    height: 96.5vh;
+    height: 97.5vh;
     background-color: #D6DBDF;
 }
 .tools-main {
@@ -275,4 +275,5 @@ ul li.active button {
     font-size: 14px;
     outline: none;
     border-radius: 20px;
+	height: 40px;
 }
