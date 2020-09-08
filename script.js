@@ -1,5 +1,5 @@
 function sdSearch(){
-	var casenumber = document.getElementById("sdId").trim();
+	var casenumber = document.getElementById("sdId");
 	if(casenumber.value.length==0)
 	{
 		alert("Search cannot be empty!")
