@@ -1,24 +1,25 @@
 function sdSearch(){
-	var casenumber = document.getElementById("sdId");
-	if(casenumber.value.length==0)
+	var sr = document.getElementById("sdId");
+	var casenumber = sr.value.trim();
+	if(casenumber.length==0)
 	{
 		alert("Search cannot be empty!")
 	}	
 	else
 	{
-		if(casenumber.value.match(/^[0-9]+$/))
+		if(casenumber.match(/^[0-9]+$/))
 		{
-			if(casenumber.value.length==9)
+			if(casenumber.length==9)
 			{
-				window.open("https://portal.microsofticm.com/imp/v3/incidents/details/"+casenumber.value+"/home");
+				window.open("https://portal.microsofticm.com/imp/v3/incidents/details/"+casenumber+"/home");
 			}
-			else if(casenumber.value.length==15)
+			else if(casenumber.length==15)
 			{
-				window.open("https://servicedesk.microsoft.com/#/customer/case/"+casenumber.value);
+				window.open("https://servicedesk.microsoft.com/#/customer/case/"+casenumber);
 			}
-			else if(casenumber.value.length==8)
+			else if(casenumber.length==8)
 			{
-				window.open("https://rave.office.net/search?query="+casenumber.value);
+				window.open("https://rave.office.net/search?query="+casenumber);
 			}
 			else
 				alert("Enter a valid SR / IcM / Rave number!");
