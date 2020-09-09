@@ -7,9 +7,17 @@
       <script type="text/javascript" src="script.js"></script>  
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 	  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
    </head>
    <body>
+   
+   		<div id="search-icm" class="container"  style="display:none;">
+			<div class="search-bar-align">
+				<input type="text" id="searchIcM" placeholder="Search CSS Supportability app here..." class="input-search shadow">
+				<button id="searchIcMBtn" class="button csssupportabilitywiki shadow" onclick="icmSearch()"><i class="fa fa-search"></i></button>
+			 </div>
+			 <p><i class="fas fa-exclamation-triangle" style="font-size:15px; margin-right:10px; color: #2C3E50;"></i>Fetches information based on keywords included in <b>Title</b> of the IcM</p>
+		 </div>
    
 			<!--<div class="top-search">
 				<input type="text" id="sdId-top" placeholder="Search SR / Rave / IcM..." class="sidebar-search shadow">
@@ -17,7 +25,7 @@
 			</div>-->
 	   
 	   
-		<div id="tools" class="tools"  style="display:none;">			
+		<div id="tools" class="tools"   style="display:none;">			
 			<div class="tools-main">
 				
 				<a href="https://dev.azure.com/Supportability/Power%20BI/_wiki/wikis/Wiki/122231/Home-Page" target="_blank"><b>CSS Supportability Wiki</b></a>
@@ -40,20 +48,24 @@
 			</div>
 		 </div>
 		 
-         <div id="service-desk-container" class="sd-container" >
-           <div class="serviceDeskSearch">
-		   
-		   <div class="pretty p-switch p-slim">
+         <div id="service-desk-container" class="container">
+           <div class="search-bar-align">
+		   		<!--<input type="checkbox" id = "ascCheckbox" class="pretty p-default"> <span style="margin-right:50px;">ASC</span>-->
+				
+				
+					<div class="pretty p-switch p-slim">
 						<input type="checkbox" id = "ascCheckbox" class="pretty p-default"> 
 						<div class="state p-warning">
 							<label style="color:#2C3E50;letter-spacing: 0.2em;"><b>ASC</b></label>
 						</div>
 					</div>
+	
+	
 				<input type="text" id="sdId" placeholder="Enter any Support Request, IcM or Rave number here..." class="input-search shadow">
 				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
 		   </div>
 		   <p>Search for any Service Request, IcM or Rave number to open them in a new window. You can also click on below buttons to go to their respective home pages.</p>
-		 <p> To go to <b>Azure Support Center</b>, enable <em>ASC</em> button next to search bar and enter Service Request number</p>
+		   <p> To go to <b>Azure Support Center</b>, enable <em>ASC</em> button next to search bar and enter Service Request number</p>
 		   <div class="homeIcons">
 				<button id="sdHome" class="button sdHome" onclick="sdHome()">Service Desk</button>
 				<button id="icmHome" class="button icmHome" onclick="icmHome()">IcM</button>	
@@ -63,8 +75,8 @@
 		 
 		 	
 		 
-		 <div id="search-azure-devops" class="azureDevOpsContainer"  style="display:none;">
-			<div id="azure-devops" class="azureDevOpsSearch">
+		 <div id="search-azure-devops" class="container"  style="display:none;">
+			<div class="search-bar-align">
 				<input type="text" id="devops" placeholder="Search CSS Supportability app here..." class="input-search shadow">
 				<button id="devopsSearch" class="button csssupportabilitywiki shadow" onclick="devopsSearch()"><i class="fa fa-search"></i></button>
 		
@@ -74,40 +86,28 @@
 		 </div>		 
 		 
 		 
-		 <div id="search-pbioffdoc" class="sd-container" style="display:none;">
-			<div id="azure-devops" class="azureDevOpsSearch">
+		 <div id="search-pbioffdoc" class="container" style="display:none;">
+			<div class="search-bar-align">
 				<input type="text" id="pbioffdocsearch" placeholder="Search Power BI documentation here...." class="input-search shadow">
 				<button id="pbioffdocsearch-btn" class="button csssupportabilitywiki shadow" onclick="pbiOfficialDocsSearch()"><i class="fa fa-search"></i></button>
 			 </div>
-			  <p><i class="fas fa-exclamation-triangle" style="font-size:15px; margin-right:10px; color: #2C3E50;"></i>This search is limited to Power BI Official Documentation</p>
+			 <p><i class="fas fa-exclamation-triangle" style="font-size:15px; margin-right:10px; color: #2C3E50;"></i>This search is limited to Power BI Official Documentation</p>
 		    <div class="homeIcons">
 				<a href="https://powerbi.microsoft.com/en-us/blog/" target="_blank"><b>Blog</b></a>
 				<a href="https://community.powerbi.com/" target="_blank"><b>Community Forum</b></a>
 				<a href="https://ideas.powerbi.com/ideas/" target="_blank"><b>Idea Forum</b></a>
 				<a href="https://powerbi.microsoft.com/en-us/support/" target="_blank"><b>Support Page</b></a>
 			</div>
-		 </div>
-	
-	 <!--    <div id="search-icm-container" class="sd-container"  style="display:none;">
-			<div id="searchicm" class="azureDevOpsSearch">
-				<input type="text" id="icmSearch" placeholder="Search for likewise issues in IcMs..." class="input-search shadow">
-				<button id="icmSearchBtn" class="button csssupportabilitywiki shadow" onclick="icmSearch()"><i class="fa fa-search"></i></button>
-			 </div>
-		     <p><i class="fas fa-exclamation-triangle" style="font-size:15px; margin-right:10px; color: #2C3E50;"></i>Fetches information based on keywords included in <b>Title</b> of the IcM</p>
-		   <div class="homeIcons">
-			</div>
-		 </div>	-->	 
-		 
-	
-	  
-	  
+		 </div>	
+		
+
 	<div class="sidebar" id="sidebar">
          <ul>
             <li class="sidebar-btn active"><button onclick="show('service-desk-container')">Search Case</button></li>
 			<li  class="sidebar-btn"><button onclick="show('search-azure-devops')">Search DevOps</button></li>
             <li class="sidebar-btn"><button onclick="show('tools')">Tools</button></li>
             <li class="sidebar-btn"><button  onclick="show('search-pbioffdoc')">Documentation</button></li>
-		<!-- <li class="sidebar-btn"><button  onclick="show('search-icm-container')">Likewise IcMs</button></li>-->
+			<li class="sidebar-btn"><button  onclick="show('search-icm')">Likewise IcM</button></li>
          </ul>
       </div> 
 	   
@@ -138,15 +138,14 @@
             document.getElementById('pbioffdocsearch-btn').click();
            }
          });
-	      
-	      var input = document.getElementById('icmSearch');
+		 
+		  var input = document.getElementById('searchIcM');
          input.addEventListener("keyup", function(event) {
            if (event.keyCode === 13) {
             event.preventDefault();
-            document.getElementById('icmSearchBtn').click();
+            document.getElementById('searchIcMBtn').click();
            }
-         });	
-		
+         });		
 	      
 		let ul = document.querySelector('ul');
 		let li = document.querySelectorAll('li');
