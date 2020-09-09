@@ -47,6 +47,14 @@ function devopsSearch(){
 	window.open("https://dev.azure.com/Supportability/Power%20BI/_search?text="+inputValue+"%2A&type=wiki&lp=dashboard-Project&pageSize=25");
 }
 
+function icmSearch(){
+	var searchInput = document.getElementById("icmSearch");
+	var inputValue = searchInput.value;
+	searchInput.value = "";
+	window.open("https://portal.microsofticm.com/imp/v3/incidents/omnisearch?searchString=s:%22Power%20BI%22%20ti:%22"+inputValue+"%22");
+}
+
+
 function pbiOfficialDocsSearch(){
 	var searchInput = document.getElementById("pbioffdocsearch");
 	var inputValue = searchInput.value;
