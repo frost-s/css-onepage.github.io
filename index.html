@@ -7,6 +7,7 @@
       <script type="text/javascript" src="script.js"></script>  
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 	  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
    </head>
    <body>
    
@@ -41,6 +42,13 @@
 		 
          <div id="service-desk-container" class="sd-container"  style="display:none;">
            <div class="serviceDeskSearch">
+		   
+		   <div class="pretty p-switch p-slim">
+						<input type="checkbox" id = "ascCheckbox" class="pretty p-default"> 
+						<div class="state p-warning">
+							<label style="color:#2C3E50;letter-spacing: 0.2em;"><b>ASC</b></label>
+						</div>
+					</div>
 				<input type="text" id="sdId" placeholder="Enter any Support Request, IcM or Rave number here..." class="input-search shadow">
 				<button id="sdSearchEnter" onclick="sdSearch()"><i class="fa fa-search"></i></button>
 		   </div>
