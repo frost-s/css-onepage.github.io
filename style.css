@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
  body {
     margin: 0;
     font-family: Arial;
