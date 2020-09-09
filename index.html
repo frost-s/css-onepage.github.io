@@ -88,7 +88,14 @@
 			</div>
 		 </div>
 	
-		 
+	     <div id="search-icm-container" class="sd-container"  style="display:none;">
+			<div id="searchicm" class="azureDevOpsSearch">
+				<input type="text" id="icmSearch" placeholder="Search for likewise issues in IcMs..." class="input-search shadow">
+				<button id="icmSearchBtn" class="button csssupportabilitywiki shadow" onclick="icmSearch()"><i class="fa fa-search"></i></button>
+			 </div>
+		   <div class="homeIcons">
+			</div>
+		 </div>		 
 		 
 	
 	  
@@ -99,6 +106,7 @@
 			<li  class="sidebar-btn"><button onclick="show('search-azure-devops')">Search DevOps</button></li>
             <li class="sidebar-btn"><button onclick="show('tools')">Tools</button></li>
             <li class="sidebar-btn"><button  onclick="show('search-pbioffdoc')">Documentation</button></li>
+		 <li class="sidebar-btn"><button  onclick="show('search-icm-container')">Likewise IcMs</button></li>
          </ul>
       </div> 
 	   
@@ -129,6 +137,14 @@
             document.getElementById('pbioffdocsearch-btn').click();
            }
          });
+	      
+	      var input = document.getElementById('icmSearch');
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById('icmSearchBtn').click();
+           }
+         });	
 		
 	      
 		let ul = document.querySelector('ul');
