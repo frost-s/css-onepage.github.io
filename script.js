@@ -16,7 +16,13 @@ function sdSearch(){
 			}
 			else if(casenumber.length==15)
 			{
-				window.open("https://servicedesk.microsoft.com/#/customer/case/"+casenumber);
+				if(document.getElementById("ascCheckbox").checked)
+				{
+					window.open("https://azuresupportcenter.msftcloudes.com/tenantexplorer/?srId="+casenumber);
+				}
+				else{
+					window.open("https://servicedesk.microsoft.com/#/customer/case/"+casenumber);
+				}
 			}
 			else if(casenumber.length==8)
 			{
