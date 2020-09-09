@@ -47,19 +47,18 @@ function devopsSearch(){
 	window.open("https://dev.azure.com/Supportability/Power%20BI/_search?text="+inputValue+"%2A&type=wiki&lp=dashboard-Project&pageSize=25");
 }
 
-function icmSearch(){
-	var searchInput = document.getElementById("icmSearch");
-	var inputValue = searchInput.value;
-	searchInput.value = "";
-	window.open("https://portal.microsofticm.com/imp/v3/incidents/omnisearch?searchString=s:%22Power%20BI%22%20ti:%22"+inputValue+"%22");
-}
-
-
 function pbiOfficialDocsSearch(){
 	var searchInput = document.getElementById("pbioffdocsearch");
 	var inputValue = searchInput.value;
 	searchInput.value = "";
 	window.open("https://docs.microsoft.com/en-us/search/?scope=Power%20BI&category=Documentation&terms="+inputValue);
+}
+
+function icmSearch(){
+	var searchInput = document.getElementById("searchIcM");
+	var inputValue = searchInput.value;
+	searchInput.value = "";
+	window.open("https://portal.microsofticm.com/imp/v3/incidents/omnisearch?searchString=s:%22Power%20BI%22%20ti:%22"+inputValue+"%22");
 }
 
 function cssSupportabilityWiki(){
@@ -103,5 +102,6 @@ function sdQueueSearch(){
 	 document.getElementById("search-pbioffdoc").style.display="none";
 	 document.getElementById("search-azure-devops").style.display="none";
 	 document.getElementById("service-desk-container").style.display="none";
+	 document.getElementById("search-icm").style.display="none";
 	 document.getElementById(elementId).style.display="";
 }
