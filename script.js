@@ -1,6 +1,7 @@
 function sdSearch(){
 	var sr = document.getElementById("sdId");
 	var casenumber = sr.value.trim();
+	sr.value = "";
 	if(casenumber.length==0)
 	{
 		alert("Search cannot be empty!")
@@ -34,13 +35,17 @@ function adeExplorer(){
 }
 
 function devopsSearch(){
-	var searchInput = document.getElementById("devops").value;
-	window.open("https://dev.azure.com/Supportability/Power%20BI/_search?text="+searchInput+"%2A&type=wiki&lp=dashboard-Project&pageSize=25");
+	var searchInput = document.getElementById("devops");
+	var inputValue = searchInput.value;
+	searchInput.value="";
+	window.open("https://dev.azure.com/Supportability/Power%20BI/_search?text="+inputValue+"%2A&type=wiki&lp=dashboard-Project&pageSize=25");
 }
 
 function pbiOfficialDocsSearch(){
-	var searchInput = document.getElementById("pbioffdocsearch").value;
-	window.open("https://docs.microsoft.com/en-us/search/?scope=Power%20BI&category=Documentation&terms="+searchInput);
+	var searchInput = document.getElementById("pbioffdocsearch");
+	var inputValue = searchInput.value;
+	searchInput.value = "";
+	window.open("https://docs.microsoft.com/en-us/search/?scope=Power%20BI&category=Documentation&terms="+inputValue);
 }
 
 function cssSupportabilityWiki(){
