@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import '~pretty-checkbox/src/pretty-checkbox.scss';
+  @import '~pretty-checkbox/src/pretty-checkbox.scss';
  body {
     margin: 0;
     font-family: Arial;
@@ -155,15 +155,13 @@ ul li.active button {
     font-size: 11px;
     text-align: center;
 }
-.serviceDeskSearch,
-.azureDevOpsSearch {
+.search-bar-align {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
 }
-.azureDevOpsSearch>button,
-.serviceDeskSearch>button {
+.search-bar-align>button {
     margin-left: -35px;
     border: none;
     height: 40px;
@@ -172,15 +170,17 @@ ul li.active button {
     border-radius: 8px;
     color: black;
 }
-.sd-container {
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: #D6DBDF;
+	flex-direction: column;
     padding-bottom: 25px;
     height: 97.5vh;
 }
+
 .homeIcons {
     padding-top: 20px;
     margin-top: 0;
@@ -207,14 +207,7 @@ ul li.active button {
     border-left: 5px solid #2C3E50;
     color: #2C3E50;
 }
-.azureDevOpsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D6DBDF;
-    padding-bottom: 25px;
-    height: 97.5vh;
-}
+
 .shadow {
     box-shadow: 0 6px 6px -6px #777;
 }
