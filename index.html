@@ -99,6 +99,16 @@
 				<a href="https://powerbi.microsoft.com/en-us/support/" target="_blank"><b>Support Page</b></a>
 			</div>
 		 </div>	
+	   
+	    <div id="search-community" class="container"  style="display:none;">
+			<div class="search-bar-align">
+				<input type="text" id="communitySearch" placeholder="Search Power BI Community Forum" class="input-search shadow">
+				<button id="communitySearch-btn" class="button csssupportabilitywiki shadow" onclick="communitySearch()"><i class="fa fa-search"></i></button>
+		
+			 </div>
+		   <div class="homeIcons">
+			</div>
+		 </div>			
 		
 
 	<div class="sidebar" id="sidebar">
@@ -108,6 +118,7 @@
             <li class="sidebar-btn"><button onclick="show('tools')">Tools</button></li>
             <li class="sidebar-btn"><button  onclick="show('search-pbioffdoc')">Documentation</button></li>
 			<li class="sidebar-btn"><button  onclick="show('search-icm')">Likewise IcM</button></li>
+		 <li class="sidebar-btn"><button  onclick="show('search-community')">Community</button></li>
          </ul>
       </div> 
 	   
@@ -136,6 +147,14 @@
            if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById('pbioffdocsearch-btn').click();
+           }
+         });
+	      
+	       var input = document.getElementById('communitySearch');
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById('communitySearch-btn').click();
            }
          });
 		 
