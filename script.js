@@ -54,6 +54,13 @@ function pbiOfficialDocsSearch(){
 	window.open("https://docs.microsoft.com/en-us/search/?scope=Power%20BI&category=Documentation&terms="+inputValue);
 }
 
+function communitySearch(){
+	var searchInput = document.getElementById("communitySearch");
+	var inputValue = searchInput.value;
+	searchInput.value = "";
+	window.open("https://community.powerbi.com/t5/forums/searchpage/tab/message?filter=hasKudos,solvedThreads&q="+inputValue+"&solved=true&has_kudos=true&collapse_discussion=true");
+}
+
 function icmSearch(){
 	var searchInput = document.getElementById("searchIcM");
 	var inputValue = searchInput.value;
@@ -103,5 +110,6 @@ function sdQueueSearch(){
 	 document.getElementById("search-azure-devops").style.display="none";
 	 document.getElementById("service-desk-container").style.display="none";
 	 document.getElementById("search-icm").style.display="none";
+	 document.getElementById("search-community").style.display="none";
 	 document.getElementById(elementId).style.display="";
 }
