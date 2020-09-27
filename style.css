@@ -86,7 +86,7 @@ p {
 .sidebar {
     position: fixed;
     right: 0;
-    top: 40vh;
+    top: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +178,7 @@ ul li.active button {
     background-color: #D6DBDF;
 	flex-direction: column;
     padding-bottom: 25px;
-    height: 97.5vh;
+    height: 95.5vh;
 }
 
 .homeIcons {
